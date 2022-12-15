@@ -5,7 +5,7 @@ const initialState = {
   loading: false,
   error: '',
   missions: [],
-}
+};
 
 export const fetchMissions = createAsyncThunk('fetchMissions', async () => {
   const response = await axios
@@ -19,17 +19,17 @@ const missionSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchMissions.pending, (state) => {
       state.loading = true;
-    })
+    });
     builder.addCase(fetchMissions.fulfilled, (state, action) => {
       state.loading = false;
       state.missions = action.payload;
       state.error = '';
-    })
+    });
     builder.addCase(fetchMissions.rejected, (state, action) => {
       state.loading = false;
       state.missions = [];
       state.error = action.error.message;
-    })
+    });
   },
 });
 

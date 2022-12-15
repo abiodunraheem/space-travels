@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../../redux/mission/missionListReducer';
 
-const Mission = () => {
-  const missions = useSelector(state => state.missions.missions)
+function Mission() {
+  const missions = useSelector((state) => state.missions.missions);
   const dispatch = useDispatch();
-  useEffect (() => {
-    dispatch (fetchMissions())
-  }, [dispatch])
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
   return (
     <div>
       <h2>Mission</h2>
@@ -25,7 +25,7 @@ const Mission = () => {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default Mission
+export default Mission;

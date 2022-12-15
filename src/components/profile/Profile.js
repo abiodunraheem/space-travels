@@ -1,11 +1,10 @@
 import React from 'react';
 import './profile.css';
 
-const Profile = () => {
+function Profile() {
   return (
-    <div className='detail_container'>Profile</div>
-  )
+    <div className="detail_container">Profile</div>
+  );
 }
 
-export default Profile
-
+export default Profile;

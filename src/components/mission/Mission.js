@@ -13,7 +13,7 @@ function Mission() {
       <h2>Mission</h2>
       {missions.map((item) => (
         <div className="details-container" key={item.mission_id}>
-          <div className="contents p-5">
+          <div className="contents">
             <div className="mission_name">
               <h3>{item.mission_name}</h3>
             </div>

@@ -6,6 +6,18 @@ import './rocket.css';
 function Rocket() {
   const rockets = useSelector((state) => state.rockets.rockets);
   const dispatch = useDispatch();
+
+  // const handleBooking = (e) => {
+  //   const { id } = e.target;
+  //   useEffect(() => {
+  //     if (rockets.reserved) {
+  //       dispatch(CancelRocketBooking(id));
+  //     } else {
+  //       dispatch(fetchRockets());
+  //     }
+  //   }, [dispatch]);
+  // };
+
   useEffect(() => {
     dispatch(fetchRockets());
   }, [dispatch]);

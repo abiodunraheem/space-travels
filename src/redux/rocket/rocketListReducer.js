@@ -16,7 +16,7 @@ export const fetchRockets = createAsyncThunk('fetchRockets', async () => {
 const rocketSlice = createSlice({
   name: 'rocket',
   initialState,
-  // reducers: {},
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.pending, (state) => {
       state.loading = true;

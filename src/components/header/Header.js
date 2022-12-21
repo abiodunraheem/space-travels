@@ -1,9 +1,9 @@
 import React from 'react';
 import './header.css';
-import planet from '../../assets/planet.png';
 import { NavLink } from 'react-router-dom';
+import planet from '../../assets/planet.png';
 
-const Header = () => {
+function Header() {
   return (
     <header>
       <div className="header-container">
@@ -13,31 +13,34 @@ const Header = () => {
         </div>
         <ul className="header-links">
           <li>
-            <NavLink to="/rocket"
-            style={({ isActive }) => ({
-              color: 'rgb(37, 150, 190)',
-              textDecoration: isActive ? 'underline' : 'none',
-            })}
+            <NavLink
+              to="/rocket"
+              style={({ isActive }) => ({
+                color: 'rgb(37, 150, 190)',
+                textDecoration: isActive ? 'underline' : 'none',
+              })}
             >
               Rocket
             </NavLink>
           </li>
           <li>
-            <NavLink to="/mission"
-            style={({ isActive }) => ({
-              color: 'rgb(37, 150, 190)',
-              textDecoration: isActive ? 'underline' : 'none',
-            })}
+            <NavLink
+              to="/mission"
+              style={({ isActive }) => ({
+                color: 'rgb(37, 150, 190)',
+                textDecoration: isActive ? 'underline' : 'none',
+              })}
             >
               Mission
             </NavLink>
           </li>
           <li>
-            <NavLink to="/profile"
-            style={({ isActive }) => ({
-              color: 'rgb(37, 150, 190)',
-              textDecoration: isActive ? 'underline' : 'none',
-            })}
+            <NavLink
+              to="/profile"
+              style={({ isActive }) => ({
+                color: 'rgb(37, 150, 190)',
+                textDecoration: isActive ? 'underline' : 'none',
+              })}
             >
               Profile
             </NavLink>
@@ -45,7 +48,7 @@ const Header = () => {
         </ul>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
